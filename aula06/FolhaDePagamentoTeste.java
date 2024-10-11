@@ -16,6 +16,8 @@ public class FolhaDePagamentoTeste {
 		System.out.println("=============================================");
 		System.out.println("Total da folha de pagamento R$ " + folha.totalFolhaPagamento(0, 0));
 		System.out.println("=============================================");
+		System.out.println("");
+		System.out.println("================*FIM OPERACAO*================");
 
 	}
 
