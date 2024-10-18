@@ -6,7 +6,7 @@ public class VeiculoTeste {
 		Carro fusca = new Carro(30, "amarelo", "VW", "Fusca 1600", 2, false, 
 				250, "Manual", false, 1600);
 		
-		Moto cg150 = new Moto(13, "vermelha", "Honda", "FAN125", true, true, 
+		Moto cg150 = new Moto(13, "azul", "Honda", "FAN125", true, true, 
 				"eletrica", "sentado", "city", 150);
 		
 		System.out.println(fusca);
