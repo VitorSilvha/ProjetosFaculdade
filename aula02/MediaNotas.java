@@ -14,9 +14,9 @@ public class MediaNotas {
 		float n3 = entrada.nextFloat();
 		float media = (n1+n2+n3)/3;
 		
-//		A média de aprovação é >= 7.0; 
-//		a média de recuperação é >= 5.0 e < 7.0; e
-//		a média do reprovado é < 5.0
+//		A mï¿½dia de aprovaï¿½ï¿½o ï¿½ >= 7.0; 
+//		a mï¿½dia de recuperaï¿½ï¿½o ï¿½ >= 5.0 e < 7.0; e
+//		a mï¿½dia do reprovado ï¿½ < 5.0
 		if (media >= 7f) {
 //			System.out.println("Aluno aprovado");
 			System.out.printf("Aluno aprovado com nota %.2f\n");
