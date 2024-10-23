@@ -9,6 +9,7 @@ public class Diretor extends Pessoa {
 	public float getSalario() {
 		float bonus = salario*(20f/100f);
 		return salario + bonus;
+		System.out.println("");
 	}
 
 	@Override
