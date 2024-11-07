@@ -17,7 +17,16 @@ public class Personagem {
 	
 	public void Atacar(Personagem p, int dano) {
 		if (this !=p) {
-			int novaSaude = p.getSaude() - dano;
+			int novoDano = dano;
+			if( (p.getNivel() - nivel) > 5 ) {
+				novoDano = novoDano / 2;
+			}else if (nivel - p.getNivel() < 5 ) {
+				novoDano = (int) (novoDano * 1.5);
+	
+			}
+			
+			
+			int novaSaude = p.getSaude() - novoDano;
 			if (novaSaude <= 0) {
 				p.setSaude(0);
 				p.setVivo(false);
