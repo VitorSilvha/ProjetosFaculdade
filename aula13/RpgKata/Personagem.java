@@ -16,22 +16,31 @@ public class Personagem {
 	}
 	
 	public void Atacar(Personagem p, int dano) {
-		int novaSaude = p.getSaude() - dano;
-		p.setSaude(novaSaude);
-		if (dano > novaSaude) {
-			vivo = false;
+		if (this !=p) {
+			int novaSaude = p.getSaude() - dano;
+			if (novaSaude <= 0) {
+				p.setSaude(0);
+				p.setVivo(false);
+			} else {
+				p.setSaude(novaSaude);
+			}
 		}
-		else
-		vivo = true;
 	}
 	
 	public void Curar (Personagem p, int cura) {
-		if (vivo == true) {
-			int novaCura = p.getSaude() + cura;
-			p.setSaude(novaCura);
+		if(this !=p) {
+			System.out.println("Persoagem só pode curar a si mesmo");
+			return;
 		}
-		else
-			System.out.println("Personagem se fudeu");
+		if (p.isVivo()) {
+			int novaCura = p.getSaude() + cura;
+				if (novaCura > 1000) {
+					System.out.println("Nível de cura não permitido");
+					p.setSaude(1000);
+			 		} else {
+					p.setSaude(novaCura);
+				}
+		}
 	}
 	
 	public int getSaude() {
