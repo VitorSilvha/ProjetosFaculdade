@@ -18,6 +18,10 @@ public class Personagem {
 	public void Atacar(Personagem p, int dano) {
 		if (this !=p) {
 			int novoDano = dano;
+			if (dano <=0) {
+				System.out.println("ERRO número do dano negativo");
+				return;
+			}
 			if( (p.getNivel() - nivel) > 5 ) {
 				novoDano = novoDano / 2;
 			}else if (nivel - p.getNivel() < 5 ) {
@@ -43,6 +47,10 @@ public class Personagem {
 		}
 		if (p.isVivo()) {
 			int novaCura = p.getSaude() + cura;
+			
+			if (novaCura <= 0) {
+				System.out.println("ERRO número da cura negativo");
+			}
 				if (novaCura > 1000) {
 					System.out.println("Nível de cura não permitido");
 					p.setSaude(1000);
